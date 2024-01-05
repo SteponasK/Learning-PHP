@@ -22,7 +22,7 @@ $pageTitle = 'Brad\'s PHP Blog | ' . $title; // concatination
         <h1><?= $title ?></h1>
         <p>By: <?= $author ?></p>
         <p>
-            $body;
+            <?= $body ?>;
         </p>
     </main>
 </body>
