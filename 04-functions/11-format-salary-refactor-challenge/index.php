@@ -42,6 +42,10 @@ $listings = [
     ],
 ];
 
+// function formatSalary($salary)
+// {
+//     return '$' . number_format($salary, 2);
+// }
 $formatSalary = fn ($salary) => '$' . number_format($salary, 2);
 
 function highlightTags($tags, $searchTerm)
@@ -91,13 +95,13 @@ function calculateAverageSalary($listings, $formatSalary)
         <!-- Output -->
         <?php foreach ($listings as $index => $job) : ?>
             <div class="md my-4">
-                <div class="rounded-lg shadow-md <?= $index % 2 === 0 ? 'bg-blue-100' : 'bg-white'; ?>">
+                <div class="rounded-lg shadow-md <?= $index % 2 === 0 ? 'bg-blue-100' : 'bg-white' ?>">
                     <div class="p-4">
                         <h2 class="text-xl font-semibold"><?= $job['title'] ?></h2>
                         <p class="text-gray-700 text-lg mt-2"><?= $job['description'] ?></p>
                         <ul class="mt-4">
                             <li class="mb-2">
-                                <strong>Salary:</strong> <?= $formatSalary($job['salary']) ?>
+                                <strong>Salary:</strong> <?= $formatSalary($job['salary']); ?> <!-- added $ sign to formatSalary  -->
                             </li>
                             <li class="mb-2">
                                 <strong>Location:</strong> <?= $job['location'] ?>
