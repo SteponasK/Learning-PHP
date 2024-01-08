@@ -4,6 +4,7 @@ function add($a, $b)
 {
     return $a + $b;
 }
+
 echo add(1, 2);
 */
 
@@ -16,6 +17,7 @@ $numbers = [1, 2, 3, 4, 5];
 $squaredNumbers = array_map(function ($number) {
     return $number * $number;
 }, $numbers);
+
 print_r($squaredNumbers);
 */
 
